@@ -47,6 +47,7 @@ export const ProfileContainer = styled.header`
         text-decoration: none;
         height: min-content;
         padding-bottom: 0.2rem;
+        border-bottom: 1px solid transparent;
 
         :hover {
           border-bottom: 1px solid ${(props) => props.theme.blue};
