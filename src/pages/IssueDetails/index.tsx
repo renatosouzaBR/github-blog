@@ -1,55 +1,64 @@
+import { NavLink, useLocation } from 'react-router-dom'
+import { GoLinkExternal } from 'react-icons/go'
 import {
   FaCalendarDay,
   FaChevronLeft,
   FaComment,
   FaGithub,
 } from 'react-icons/fa'
-import { GoLinkExternal } from 'react-icons/go'
 
 import { IssueDetailsContainer, MarkdownDetails } from './styles'
 
+type FullIssue = {
+  id: number
+  created_at: string
+  title: string
+  body: string
+  html_url: string
+  comments: number
+}
+
 export function IssueDetails() {
+  const { state } = useLocation()
+  const issue = state as FullIssue
+  console.log(issue)
+
   return (
     <IssueDetailsContainer>
       <header>
         <div>
-          <a href="#">
+          <NavLink to="/">
             <FaChevronLeft />
             Voltar
-          </a>
+          </NavLink>
 
-          <a href="#">
+          <a href={issue.html_url} target="_blank" rel="noreferrer">
             Ver no github
             <GoLinkExternal />
           </a>
         </div>
 
-        <strong>JavaScript data types and data structures</strong>
+        <strong>{issue.title}</strong>
 
         <div>
           <span>
             <FaGithub />
-            cameronwll
+            renatosouzaBR
           </span>
 
           <span>
             <FaCalendarDay />
-            Rocketseat
+            RAS
           </span>
 
           <span>
             <FaComment />
-            32 seguidores
+            {issue.comments} comentários
           </span>
         </div>
       </header>
 
-      <MarkdownDetails>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque aliquid
-        quibusdam omnis nam vitae officia quidem! Doloribus modi repellendus
-        aperiam eius ratione. Nemo ipsa minus, aperiam molestiae veniam tempora
-        facilis.
-      </MarkdownDetails>
+      <MarkdownDetails>{issue.body}</MarkdownDetails>
     </IssueDetailsContainer>
   )
 }

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import ReactMarkdown from 'react-markdown'
 
 export const IssueDetailsContainer = styled.div`
   width: 100%;
@@ -69,7 +70,7 @@ export const IssueDetailsContainer = styled.div`
   }
 `
 
-export const MarkdownDetails = styled.p`
+export const MarkdownDetails = styled(ReactMarkdown)`
   width: 100%;
   padding: 4rem 3.2rem;
 `

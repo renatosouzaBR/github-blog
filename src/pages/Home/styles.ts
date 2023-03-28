@@ -54,7 +54,7 @@ export const IssuesContainer = styled.div`
   margin: 4.8rem 0;
   grid-gap: 3.2rem;
 
-  button {
+  a {
     width: 100%;
     height: 26rem;
     border-radius: 10px;
@@ -62,6 +62,7 @@ export const IssuesContainer = styled.div`
     border: none;
     background-color: ${(props) => props.theme['base-post']};
     cursor: pointer;
+    text-decoration: none;
 
     display: flex;
     flex-direction: column;
@@ -86,7 +87,7 @@ export const IssuesContainer = styled.div`
       span {
         font-size: 1.4rem;
         color: ${(props) => props.theme['base-span']};
-        width: 10rem;
+        min-width: 10rem;
       }
     }
 
