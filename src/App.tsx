@@ -1,6 +1,7 @@
 import { ThemeProvider } from 'styled-components'
 
 import { Header } from './components/Header'
+import { Home } from './pages/Home'
 import { GlobalStyles } from './styles/global'
 import { DefaultTheme } from './styles/themes/default'
 
@@ -11,7 +12,7 @@ export function App() {
 
       <div>
         <Header />
-        <h1>Hello World</h1>
+        <Home />
       </div>
     </ThemeProvider>
   )
