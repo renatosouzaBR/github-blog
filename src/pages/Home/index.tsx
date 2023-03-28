@@ -1,50 +1,10 @@
-import { FaGithub, FaBuilding, FaUserFriends } from 'react-icons/fa'
-import { GoLinkExternal } from 'react-icons/go'
-
-import {
-  HomeContainer,
-  IssuesContainer,
-  ProfileContainer,
-  SearchForm,
-} from './styles'
+import { Profile } from './Profile'
+import { HomeContainer, IssuesContainer, SearchForm } from './styles'
 
 export function Home() {
   return (
     <HomeContainer>
-      <ProfileContainer>
-        <img src="https://github.com/renatosouzaBR.png" alt="" />
-        <div>
-          <div>
-            <strong>Renato Souza</strong>
-            <a href="#">
-              GITHUB <GoLinkExternal />
-            </a>
-          </div>
-
-          <p>
-            Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu
-            viverra massa quam dignissim aenean malesuada suscipit. Nunc,
-            volutpat pulvinar vel mass.
-          </p>
-
-          <div>
-            <span>
-              <FaGithub />
-              cameronwll
-            </span>
-
-            <span>
-              <FaBuilding />
-              Rocketseat
-            </span>
-
-            <span>
-              <FaUserFriends />
-              32 seguidores
-            </span>
-          </div>
-        </div>
-      </ProfileContainer>
+      <Profile />
 
       <SearchForm>
         <div>
