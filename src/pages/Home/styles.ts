@@ -52,7 +52,7 @@ export const IssuesContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 4.8rem 0;
-  grid-column-gap: 3.2rem;
+  grid-gap: 3.2rem;
 
   button {
     width: 100%;
@@ -62,6 +62,9 @@ export const IssuesContainer = styled.div`
     border: none;
     background-color: ${(props) => props.theme['base-post']};
     cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
 
     :hover {
       border: 2px solid ${(props) => props.theme['base-label']};
